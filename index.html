@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>SpreadSheet</title>
+</head>
+<body>
+    <section class="option">
+        <form class="form" id="form">
+            <select name="fontFamily" id="font-fam">
+                <option value="Default" name="fontFamily">Default</option>
+            </select>
+            <input type="number" name="fontSize" value="16">
+            <div>
+                <input type="checkbox" id="isbold" name="isbold">
+                <label for="isbold" class="material-icons">format_bold</label>
+            </div>
+            <div>
+                <input type="checkbox" id="isitalic" name="isitalic">
+                <label for="isitalic" class="material-icons">format_italic</label>
+            </div>
+            <div>
+                <input type="checkbox" id="isunderline" name="isunderline">
+                <label for="isunderline" class="material-icons">format_underline</label>
+            </div>
+            <div class="align-container fr-aic">
+                <div>
+                    <input type="radio" name="align" value="left" id="left">
+                    <label for="left" class="material-icons">format_align_left</label>
+                </div>    
+                <div>
+                    <input type="radio" name="align" value="center" id="center">
+                    <label for="center" class="material-icons">format_align_center</label>
+                </div>    
+                <div>
+                    <input type="radio" name="align" value="right" id="right">
+                    <label for="right" class="material-icons">format_align_right</label>
+                </div>
+                <div>
+                    <input type="color" id="bg-color" name="bgcolor" value="#ffffff">
+                    <label for="bg-color" class="material-icons">format_color_fill</label>
+                </div>    
+                <div class="">
+                    <input type="color" id="text-color" name="textColor" value="#000000">
+                    <label for="text-color" class="material-icons">format_color_text</label>
+                </div>    
+                <span class="material-icons" id="download">cloud_download</span>
+                <input type="file" id="upload" style="display: none">
+                <label class="material-icons" for="upload">cloud_upload</label>
+            </div>
+        </form>
+        <div class="box fr-aic">
+            <div class="selected-cell">NA</div>
+            <input type="text" placeholder="Evaluate expression" id="expression">
+        </div>
+    </section>
+    <div class="container">
+        <div id="plate" class="plate"></div>
+        <div id="head-row" class="head-row"></div>
+        <div id="sno" class="sno"></div>
+        <div id="body" class="body"></div>
+    </div>
+    <script src="option.js"></script>
+    <script src="script.js"></script>
+    <script src="downloadupload.js"></script>
+</body>
+</html>
